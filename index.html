@@ -71,152 +71,7 @@
                 </p>
             </section>
             <section>
-                /* Import */
-
-@import url('https://fonts.googleapis.com/css?family=Chivo:300,300i,400,400i,700,700i,900,900i|Saira+Extra+Condensed:100,200,300,400,500,600,700,800|Saira:100,200,300,400,500,600,700,800');
-
-/* Variables */
-
-@background: #252827;
-
-@color-primary: #004ffc;
-@color-light: white;
-@color-dim: #6c6d6d;
-@spacing: 50px;
-@radius: 4px;
-
-@date: 120px;
-@dotborder: 4px;
-@dot: 11px;
-@line: 4px;
-
-@font-title: 'Saira', sans-serif;
-@font-text: 'Chivo', sans-serif;
-
-/* Base */
-
-body {
-  background: @background;
-  font-size: 16px;
-}
-
-p {
-  font-weight: 300;
-}
-
-a { 
-  color: @color-dim;
-  text-decoration: none;
-  text-transform: uppercase;
-  display: block;
-  letter-spacing: .3em;
-  font-size: .6em;
-  font-weight: 400;
-  background: #252727;
-  padding: .3rem 1rem;
-  margin: 1.9rem 0 0 0;
-  float: right;
-}
-
-a:hover { 
-  color: @color-light;
-  background: @color-primary;
-  border-bottom: .35em solid black;
-}
-
-strong {
-  font-weight: 600;
-}
-
-h1 {
- font-family: @font-title;
- letter-spacing: 1.5px;
- color: @color-light;  
- font-weight: 400;
- font-size: 2.4em;
-}
-
-#timeline-content {
-  margin-top: @spacing;
-  text-align: center;  
-}
-
-/* Timeline */
-
-.timeline {
-  border-left: @line solid @color-primary;
-  border-bottom-right-radius: @radius;
-  border-top-right-radius: @radius;    
-  background: fade(@color-light, 3%);
-  color: fade(white, 80%);
-  font-family: @font-text;  
-  margin: @spacing auto;  
-  letter-spacing: 0.5px;   
-  position: relative;
-  line-height: 1.4em;
-  font-size: 1.03em;   
-  padding: @spacing;   
-  list-style: none;
-  text-align: left;  
-  font-weight: 100;  
-  max-width: 30%; 
-  
-  h1 {
-   font-family: @font-title;
-   letter-spacing: 1.5px;
-   font-weight: 100;
-   font-size: 1.4em;    
-  }
-  
-  h2, h3 {
-   font-family: @font-title;
-   letter-spacing: 1.5px;
-   font-weight: 400;
-   font-size: 1.4em;
-  }
-  
-  .event {
-    border-bottom: 1px dashed fade(@color-light, 10%);
-    padding-bottom: (@spacing * 0.5);
-    margin-bottom: @spacing;  
-    position: relative;
-
-    &:last-of-type { 
-      padding-bottom: 0;
-      margin-bottom: 0; 
-      border: none;      
-    }
-
-    &:before, &:after {
-      position: absolute;
-      display: block;
-      top: 0;
-    }
-
-    &:before {
-      left: (((@date * 0.6) + @spacing + @line + @dot + (@dotborder * 2)) * 1.5) * -1;    
-      color: fade(@color-light, 40%);    
-      content: attr(data-date);
-      text-align: right;
-      font-weight: 100;    
-      font-size: 0.9em;
-      min-width: @date;
-      font-family: @font-title;
-    }
-
-    &:after {
-      box-shadow: 0 0 0 @dotborder fade(@color-primary,100%);    
-      left: (@spacing + @line + (@dot * 0.35)) * -1;        
-      background: lighten(@background,5%);    
-      border-radius: 50%;  
-      height: @dot;
-      width: @dot;
-      content: "";
-      top: 5px;
-    }
-  }
-}
-                <h2>education</h2>
+                 <h2>education</h2>
                 <p>
                     <h3>PhD Student, Royal Netherlands Institute for Sea Research & Utrecht University (Texel, NL)</h3>
                     <h4>Feb 2020 —</h4>
@@ -240,15 +95,74 @@ h1 {
             <div onclick="closecontact()"><i class="fas fa-angle-down"></i></div>
             <h1>contact.</h1>
             <section>
-                <h2>contact me</h2>
-                <p>
-                    <form>
-                        <input type="text" placeholder="name" required>
-                        <input type="email" placeholder="email" required><br>
-                        <textarea placeholder="your message" required rows="5"></textarea><br>
-                        <button class="btn_one">send</button>
-                    </form> 
-                </p>
+                <head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {
+  box-sizing: border-box;
+}
+
+/* Create two equal columns that floats next to each other */
+.column {
+  float: left;
+  width: 50%;
+  padding: 10px;
+  height: 300px; /* Should be removed. Only for demonstration */
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .column {
+    width: 100%;
+  }
+}
+</style>
+</head>
+<body>
+
+<div class="page-title">
+  <h1>
+    {{ page.title }}
+  </h1>
+</div>
+
+<div class="row">
+  <div class="column" style="background-color:#fff;">
+    <h2>Find me on land</h2>
+    <h3>Royal Netherlands Institute for Sea Research</h3>
+    <p>
+Landsdiep 4<br> 
+1797 SZ ‘t Horntje (Texel)<br> 
+Netherlands<br> 
+T: +31 (0)222 369 564<br> 
+<br>
+<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1496433.0281563827!2d4.2970418827663615!3d52.239717941343464!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNTPCsDAwJzEwLjIiTiA0wrA0NycxMi4wIkU!5e0!3m2!1sen!2snl!4v1588784466479!5m2!1sen!2snl" width="400" height="300" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>   
+<br>
+    </p>
+  </div>
+  <div class="column" style="background-color:#fff;">
+    <h2>Find me online</h2>
+    
+    <a href="https://github.com/louisedelaigue" target="_blank">Github</a><br> 
+    <a href="https://scholar.google.com/citations?hl=en&user=4ewYhRMAAAAJ" target="_blank">Google Scholar</a><br> 
+    <a href="https://www.linkedin.com/in/louise-delaigue/" target="_blank">LinkedIn</a><br> 
+    <a href="https://www.nioz.nl/en/about/organisation/staff/louise-delaigue" target="_blank">NIOZ</a><br> 
+    <a href="https://orcid.org/0000-0002-9796-1128" target="_blank">ORCiD</a><br> 
+    <a href="https://publons.com/researcher/3592010/louise-delaigue/" target="_blank">Publons</a><br> 
+    <a href="https://www.researchgate.net/profile/Louise_Delaigue" target="_blank">ResearchGate</a><br> 
+    <a href="https://twitter.com/LouiseDelaigue" target="_blank">Twitter</a><br> 
+
+  </div>
+</div>
+ 
+</body>
             </section>
         </div>
         <div id="footer">
