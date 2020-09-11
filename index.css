@@ -320,6 +320,15 @@ body {
 	background: rgb(50, 180, 255);
 }
 
+/*
+  Links
+*/
+
+a {
+  color: #fff;
+  text-decoration: underline;
+}
+
 @media (max-width: 800px){ 
     #about {
         display:none;
